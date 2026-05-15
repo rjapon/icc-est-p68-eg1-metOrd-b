@@ -4,29 +4,11 @@ import models.Movie;
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("=== Evaluación: Ordenamiento de Películas por Título ===\n");
+        // imirpimir la lista de películas sin ordenar
+        // ordenar la lista de películas por título utilizando el método sortByTitle del
+        // MovieController
+        // imprimir la lista de películas ordenada
 
-        // Obtener lista de películas de ejemplo
-        Movie[] movies = generateMoviesList();
-
-        // Mostrar películas antes de ordenar
-        System.out.println("Películas ANTES de ordenar:");
-        printMovies(movies);
-
-        // Crear controlador e implementar el método sortByTitle
-        MovieController controller = new MovieController();
-
-        // Implementar el ordenamiento
-        try {
-            controller.sortByTitle(movies);
-
-            // Mostrar películas después de ordenar
-            System.out.println("\nPelículas DESPUÉS de ordenar por título:");
-            printMovies(movies);
-            System.out.println("\n Ordenamiento completado exitosamente.");
-        } catch (UnsupportedOperationException e) {
-            System.out.println("\n Error: El método sortByTitle aún no está implementado.");
-            System.out.println("Por favor, implementa el método en MovieController.java");
-        }
     }
 
     /**
@@ -65,12 +47,4 @@ public class App {
         return movies;
     }
 
-    /**
-     * Imprime las películas en formato legible
-     */
-    private static void printMovies(Movie[] movies) {
-        for (int i = 0; i < movies.length; i++) {
-            System.out.printf("%2d. %s (%d)\n", i + 1, movies[i].getTitle(), movies[i].getYear());
-        }
-    }
 }
