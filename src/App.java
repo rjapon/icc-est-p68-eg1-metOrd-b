@@ -9,6 +9,16 @@ public class App {
         // MovieController
         // imprimir la lista de películas ordenada
 
+        System.out.println("Lista de películas sin ordenar:");
+        Movie[] movies = App.generateMoviesList();
+        for (Movie movie : movies) {
+            System.out.println("- " + movie.getTitle() + " (" + movie.getYear() + ")");
+        }
+
+        MovieController controller = new MovieController();
+
+        controller.sortByTitle(movies);
+
     }
 
     /**
