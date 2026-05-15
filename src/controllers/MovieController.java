@@ -16,7 +16,7 @@ public class MovieController {
         for (int i = 0; i < movies.length - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < movies.length; j++) {
-                if (movies[j].getTitle().compareToIgnoreCase(movies[minIndex].getTitle()) < 0) {
+                if (movies[j].getTitle().compareTo(movies[minIndex].getTitle()) < 0) {
                     minIndex = j;
                 }
             }
